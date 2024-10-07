@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educator Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: auto;
+            padding-bottom: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+            margin-top: 50px; /* Add space from top */
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .profile-info {
+            text-align: left;
+            margin: 10px 0;
+        }
+        .profile-info label {
+            font-weight: bold;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        a {
+            display: block;
+            margin-top: 15px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Educator Profile</h1>
+        <div class="profile-info">
+            <label for="name">Name:</label>
+            <p id="name">Dr. Aarti Sharma</p>
+
+            <label for="email">Email:</label>
+            <p id="email">aarti.sharma@example.com</p>
+
+            <label for="institution">Institution:</label>
+            <p id="institution">Delhi University</p>
+
+            <label for="expertise">Expertise:</label>
+            <p id="expertise">Constitutional Law, Human Rights</p>
+
+            <label for="bio">Biography:</label>
+            <p id="bio">An educator with over 10 years of experience in teaching Constitutional Law and promoting awareness of human rights.</p>
+        </div>
+
+        <button onclick="editProfile()">Edit Profile</button>
+        <a href="educator.html">Back to Dashboard</a>
+    </div>
+
+    <script>
+        function editProfile() {
+            alert("Edit Profile feature is not implemented yet.");
+            // You can redirect to an edit profile page or open a modal for editing.
+            // window.location.href = 'editProfile.html'; // Uncomment this line if you have an edit profile page.
+        }
+    </script>
+</body>
+</html>
+l>

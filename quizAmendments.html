@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amendments Quiz - Indian Constitution</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        form {
+            text-align: left;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .question label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            display: block;
+            margin-top: 20px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Amendments Quiz</h1>
+        <p>Test your knowledge of the Amendments in the Indian Constitution!</p>
+
+        <form id="amendmentsQuiz">
+            <div class="question">
+                <label for="q1">1. How many amendments were made to the Indian Constitution as of 2024?</label>
+                <input type="radio" name="q1" value="105" id="q1a"> 105<br>
+                <input type="radio" name="q1" value="104" id="q1b"> 104<br>
+                <input type="radio" name="q1" value="103" id="q1c"> 103<br>
+                <input type="radio" name="q1" value="102" id="q1d"> 102
+            </div>
+
+            <div class="question">
+                <label for="q2">2. Which amendment is known for the introduction of the 73rd and 74th Amendments?</label>
+                <input type="radio" name="q2" value="61st Amendment" id="q2a"> 61st Amendment<br>
+                <input type="radio" name="q2" value="73rd Amendment" id="q2b"> 73rd Amendment<br>
+                <input type="radio" name="q2" value="74th Amendment" id="q2c"> 74th Amendment<br>
+                <input type="radio" name="q2" value="61st and 73rd Amendments" id="q2d"> 61st and 73rd Amendments
+            </div>
+
+            <div class="question">
+                <label for="q3">3. The 42nd Amendment is also known as the:</label>
+                <input type="radio" name="q3" value="Mini Constitution" id="q3a"> Mini Constitution<br>
+                <input type="radio" name="q3" value="Basic Structure" id="q3b"> Basic Structure<br>
+                <input type="radio" name="q3" value="Constitutional Amendment" id="q3c"> Constitutional Amendment<br>
+                <input type="radio" name="q3" value="Preamble Amendment" id="q3d"> Preamble Amendment
+            </div>
+
+            <div class="question">
+                <label for="q4">4. Which article provides the procedure for amending the Constitution?</label>
+                <input type="radio" name="q4" value="Article 368" id="q4a"> Article 368<br>
+                <input type="radio" name="q4" value="Article 370" id="q4b"> Article 370<br>
+                <input type="radio" name="q4" value="Article 371" id="q4c"> Article 371<br>
+                <input type="radio" name="q4" value="Article 369" id="q4d"> Article 369
+            </div>
+
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+
+        <div id="result" style="margin-top: 20px;"></div>
+
+        <a href="quizess.html">Back to Quizzes</a>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            let score = 0;
+            const totalQuestions = 4;
+
+            const answers = {
+                q1: "105",
+                q2: "61st and 73rd Amendments",
+                q3: "Mini Constitution",
+                q4: "Article 368"
+            };
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const userAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+                if (userAnswer && userAnswer.value === answers[`q${i}`]) {
+                    score++;
+                }
+            }
+
+            document.getElementById("result").innerText = `You scored ${score} out of ${totalQuestions}.`;
+        }
+    </script>
+</body>
+</html>

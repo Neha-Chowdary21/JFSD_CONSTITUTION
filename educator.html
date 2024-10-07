@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educator Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+            margin-top: 50px; /* Add space from top */
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px 0;
+            width: 100%; /* Full width buttons */
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            display: block;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Educator Dashboard</h1>
+        <p>Manage your educational activities:</p>
+        
+        <button onclick="redirectToCreateMaterial()">Create Educational Material</button>
+        <button onclick="hostWebinar()">Host Live Webinar</button>
+        <button onclick="facilitateDiscussion()">Facilitate Discussion Forum</button>
+        <button onclick="provideFeedback()">Provide Feedback on Engagement</button>
+        <button onclick="assessLearningOutcomes()">Assess Learning Outcomes</button>
+        <button onclick="viewProfile()">View Profile</button>
+
+        <a href="index.html">Logout</a>
+    </div>
+
+    <script>
+        function redirectToCreateMaterial() {
+        	 alert('Redirecting to create educational material...');
+            window.location.href = 'CreateMaterial.html'; // Redirect to createMaterial.html
+        }
+
+        function hostWebinar() {
+        	alert('Redirecting to Host Webinar...');
+            window.location.href = 'hostWebinar.html'; // Redirect to host webinar page
+        }
+
+        function facilitateDiscussion() {
+        	alert('Redirecting to Facilitate Discussion Forum...');
+            window.location.href = 'facilitateDiscussion.html'; // Redirect to discussion forum page
+        }
+
+        function provideFeedback() {
+        	alert('Redirecting to Provide Feedback...');
+            window.location.href = 'provideFeedback.html'; // Redirect to feedback page
+        }
+
+        function assessLearningOutcomes() {
+        	alert('Redirecting to Learning Outcomes...');
+            window.location.href = 'assessLearningOutcomes.html'; // Redirect to assessment page
+        }
+
+        function viewProfile() {
+        	alert('Redirecting to Profile...');
+            window.location.href = 'profile.html'; // Redirect to profile page
+        }
+    </script>
+</body>
+</html>
